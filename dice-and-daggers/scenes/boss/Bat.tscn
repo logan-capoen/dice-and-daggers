@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c04ew11d80l10" path="res://assets/ennemies/Bat/Bat with VFX/Bat-IdleFly.png" id="6_ucd4g"]
 [ext_resource type="Texture2D" uid="uid://buscv3vtjk7ea" path="res://assets/ennemies/Bat/Bat with VFX/Bat-Sleep.png" id="7_0xrjh"]
 [ext_resource type="Texture2D" uid="uid://2khi5sq7f5il" path="res://assets/ennemies/Bat/Bat with VFX/Bat-WakeUp.png" id="8_g462c"]
+[ext_resource type="Texture2D" uid="uid://cixguaxcxmn0k" path="res://assets/background/BatCave.png" id="9_f3qus"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1m6a"]
 atlas = ExtResource("2_woojr")
@@ -495,7 +496,14 @@ boss_name = "The bat"
 has_intro = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]
-position = Vector2(126.5, 90)
-scale = Vector2(2.890625, 2.15625)
+position = Vector2(989, 508.99997)
+scale = Vector2(13.515627, 12.468749)
 sprite_frames = SubResource("SpriteFrames_ppktp")
-animation = &"intro"
+animation = &"idle"
+frame_progress = 0.8393329
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=580565296]
+show_behind_parent = true
+position = Vector2(953, 544)
+scale = Vector2(0.6798651, 0.702474)
+texture = ExtResource("9_f3qus")
