@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bjeent2yv1p2m"]
+
+[ext_resource type="PackedScene" uid="uid://bhqiogroei2o6" path="res://scenes/boss/BossBase.tscn" id="1_23bpy"]
+
+[node name="BossBase" unique_id=440157149 instance=ExtResource("1_23bpy")]
