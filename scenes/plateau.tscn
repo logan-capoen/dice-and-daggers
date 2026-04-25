@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://bbysun1tr0e03"]
-
-[node name="Plateau" type="Node2D" unique_id=545427569]
-
-[node name="dés" type="MeshInstance2D" parent="." unique_id=1941473701]
-
-[node name="fond" type="MeshInstance2D" parent="." unique_id=911091297]

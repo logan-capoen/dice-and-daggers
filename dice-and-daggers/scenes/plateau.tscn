@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://bbysun1tr0e03"]
 
 [ext_resource type="Texture2D" uid="uid://cn0ekx4pl24up" path="res://background_v2.svg" id="1_7e3mn"]
+[ext_resource type="Script" uid="uid://cdcg1ytqlvwud" path="res://script/main.gd" id="1_ipy82"]
 [ext_resource type="FontFile" uid="uid://c4tihvmr25k1r" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="2_dbfg1"]
+[ext_resource type="PackedScene" uid="uid://cmuop2jp1lij5" path="res://scenes/de.tscn" id="4_dau7h"]
 
 [node name="Plateau" type="Node2D" unique_id=545427569]
+script = ExtResource("1_ipy82")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1309896490]
 anchor_mode = 0
@@ -71,3 +74,26 @@ offset_bottom = 98.0
 theme_override_fonts/font = ExtResource("2_dbfg1")
 theme_override_font_sizes/font_size = 48
 text = "Stats"
+
+[node name="dé" parent="." unique_id=980465661 instance=ExtResource("4_dau7h")]
+position = Vector2(598, 782)
+
+[node name="dé2" parent="." unique_id=641474944 instance=ExtResource("4_dau7h")]
+position = Vector2(880, 876)
+
+[node name="dé3" parent="." unique_id=1472541842 instance=ExtResource("4_dau7h")]
+position = Vector2(1304, 862)
+
+[node name="dé4" parent="." unique_id=367769667 instance=ExtResource("4_dau7h")]
+position = Vector2(1132, 814)
+
+[node name="Button" type="Button" parent="." unique_id=1512846464]
+offset_left = 816.0
+offset_top = 956.0
+offset_right = 997.0
+offset_bottom = 1027.0
+scale = Vector2(1.1238889, 1.6800001)
+theme_override_font_sizes/font_size = 45
+text = "roll dice"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
