@@ -8,3 +8,7 @@ script = ExtResource("1_t6du6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1801250748]
 position = Vector2(66, 53)
 animation = &""
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=612368277]
+show_behind_parent = true
+position = Vector2(66, 53)
