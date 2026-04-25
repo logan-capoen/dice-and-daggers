@@ -1,6 +1,21 @@
 [gd_scene format=3 uid="uid://bbysun1tr0e03"]
 
 [ext_resource type="Texture2D" uid="uid://cn0ekx4pl24up" path="res://background_v2.svg" id="1_7e3mn"]
+[ext_resource type="Script" uid="uid://dsbdiqu04m40b" path="res://scenes/bar_handling.gd" id="1_dbfg1"]
+
+[sub_resource type="Theme" id="Theme_dbfg1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ipy82"]
+bg_color = Color(0.33333334, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dau7h"]
+bg_color = Color(0, 0.2, 0.4, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dbfg1"]
+bg_color = Color(0.33333334, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6s7k"]
+bg_color = Color(0, 0.2, 0.4, 1)
 [ext_resource type="Script" uid="uid://cdcg1ytqlvwud" path="res://script/main.gd" id="1_ipy82"]
 [ext_resource type="FontFile" uid="uid://c4tihvmr25k1r" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="2_dbfg1"]
 [ext_resource type="PackedScene" uid="uid://cmuop2jp1lij5" path="res://scenes/de.tscn" id="4_dau7h"]
@@ -10,6 +25,7 @@ script = ExtResource("1_ipy82")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1309896490]
 anchor_mode = 0
+script = ExtResource("1_dbfg1")
 
 [node name="TextureRect" type="TextureRect" parent="Camera2D" unique_id=777746086]
 anchors_preset = 15
@@ -20,6 +36,41 @@ offset_bottom = 1104.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_7e3mn")
+
+[node name="HPBoss" type="ProgressBar" parent="Camera2D" unique_id=1772590562]
+offset_left = 417.0
+offset_top = 510.0
+offset_right = 1513.0
+offset_bottom = 545.0
+theme = SubResource("Theme_dbfg1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ipy82")
+show_percentage = false
+
+[node name="ShieldBoss" type="ProgressBar" parent="Camera2D" unique_id=1232933928]
+offset_left = 417.0
+offset_top = 554.0
+offset_right = 1513.0
+offset_bottom = 589.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_dau7h")
+show_percentage = false
+
+[node name="HPJoueur" type="ProgressBar" parent="Camera2D" unique_id=773546419]
+offset_left = 1606.0
+offset_top = 44.0
+offset_right = 1697.0
+offset_bottom = 879.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_dbfg1")
+fill_mode = 3
+show_percentage = false
+
+[node name="ShieldJoueur" type="ProgressBar" parent="Camera2D" unique_id=1677288807]
+offset_left = 1725.0
+offset_top = 44.0
+offset_right = 1816.0
+offset_bottom = 879.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_x6s7k")
+fill_mode = 3
+show_percentage = false
 
 [node name="Boss" type="Label" parent="." unique_id=2146258233]
 offset_left = 865.0
