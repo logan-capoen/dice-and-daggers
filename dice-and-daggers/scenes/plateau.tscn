@@ -1,11 +1,18 @@
 [gd_scene format=3 uid="uid://bbysun1tr0e03"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_e617w"]
+[ext_resource type="Texture2D" uid="uid://cn0ekx4pl24up" path="res://background_v2.svg" id="1_7e3mn"]
 
 [node name="Plateau" type="Node2D" unique_id=545427569]
 
-[node name="dés" type="MeshInstance2D" parent="." unique_id=1941473701]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1309896490]
+anchor_mode = 0
 
-[node name="fond" type="MeshInstance2D" parent="." unique_id=911091297]
-scale = Vector2(1920, 1080)
-mesh = SubResource("BoxMesh_e617w")
+[node name="TextureRect" type="TextureRect" parent="Camera2D" unique_id=777746086]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1948.0
+offset_bottom = 1104.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7e3mn")
