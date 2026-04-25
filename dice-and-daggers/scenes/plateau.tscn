@@ -2,6 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://cn0ekx4pl24up" path="res://background_v2.svg" id="1_7e3mn"]
 [ext_resource type="Script" uid="uid://dsbdiqu04m40b" path="res://scenes/bar_handling.gd" id="1_dbfg1"]
+[ext_resource type="Script" uid="uid://cdcg1ytqlvwud" path="res://script/main.gd" id="1_ipy82"]
+[ext_resource type="FontFile" uid="uid://c4tihvmr25k1r" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="2_dbfg1"]
+[ext_resource type="PackedScene" uid="uid://cmuop2jp1lij5" path="res://scenes/de.tscn" id="4_dau7h"]
+[ext_resource type="Script" uid="uid://biexvjqihl3e8" path="res://script/var_poisson.gd" id="5_cwt75"]
+[ext_resource type="Script" uid="uid://c4n4fme8m7m65" path="res://script/var_degat.gd" id="5_dau7h"]
 
 [sub_resource type="Theme" id="Theme_dbfg1"]
 
@@ -16,11 +21,6 @@ bg_color = Color(0.33333334, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x6s7k"]
 bg_color = Color(0, 0.2, 0.4, 1)
-[ext_resource type="Script" uid="uid://cdcg1ytqlvwud" path="res://script/main.gd" id="1_ipy82"]
-[ext_resource type="FontFile" uid="uid://c4tihvmr25k1r" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="2_dbfg1"]
-[ext_resource type="PackedScene" uid="uid://cmuop2jp1lij5" path="res://scenes/de.tscn" id="4_dau7h"]
-[ext_resource type="Script" uid="uid://biexvjqihl3e8" path="res://script/var_poisson.gd" id="5_cwt75"]
-[ext_resource type="Script" uid="uid://c4n4fme8m7m65" path="res://script/var_degat.gd" id="5_dau7h"]
 
 [node name="Plateau" type="Node2D" unique_id=545427569]
 script = ExtResource("1_ipy82")
