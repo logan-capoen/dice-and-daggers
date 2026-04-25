@@ -77,19 +77,19 @@ fill_mode = 3
 show_percentage = false
 
 [node name="Boss" type="Label" parent="." unique_id=2146258233]
-offset_left = 865.0
+offset_left = 900.0
 offset_top = 37.0
-offset_right = 1078.0
-offset_bottom = 148.0
+offset_right = 1113.0
+offset_bottom = 170.0
 theme_override_fonts/font = ExtResource("2_dbfg1")
 theme_override_font_sizes/font_size = 64
 text = "Boss
 "
 
 [node name="Des" type="Label" parent="." unique_id=1099980764]
-offset_left = 865.0
+offset_left = 910.0
 offset_top = 603.0
-offset_right = 1078.0
+offset_right = 1123.0
 offset_bottom = 714.0
 theme_override_fonts/font = ExtResource("2_dbfg1")
 theme_override_font_sizes/font_size = 64
@@ -154,7 +154,7 @@ scale = Vector2(1.1238889, 1.6800001)
 theme_override_font_sizes/font_size = 45
 text = "roll dice"
 
-[node name="Player" parent="." unique_id=915374431 instance=ExtResource("8_cbkn7")]
+[node name="Player" parent="." unique_id=1020096503 instance=ExtResource("8_cbkn7")]
 position = Vector2(58, 270)
 script = ExtResource("9_w3swp")
 
