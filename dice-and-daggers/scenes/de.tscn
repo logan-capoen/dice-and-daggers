@@ -6,8 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://h7isuwghyp7b" path="res://assets/images/dices/dices019.png" id="4_gvc4j"]
 [ext_resource type="Texture2D" uid="uid://cktmpt8lidymo" path="res://assets/images/dices/dices018.png" id="5_d6hk2"]
 [ext_resource type="Texture2D" uid="uid://ctsdc3kjbujgc" path="res://assets/images/dices/dices017.png" id="6_tfga6"]
+[ext_resource type="Texture2D" uid="uid://dtwgv1t62jxp3" path="res://assets/images/dices/dices000.png" id="7_hxpc4"]
 
-[node name="dé" type="Node2D" unique_id=980465661 groups=["dés"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6jiw"]
+size = Vector2(120, 120)
+
+[node name="dé" type="Area2D" unique_id=1484823573 groups=["dés"]]
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_rfdag")
 face_1 = ExtResource("2_iygk4")
@@ -19,5 +23,11 @@ face_6 = ExtResource("6_tfga6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=161054420]
 scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_hxpc4")
 region_enabled = true
 region_rect = Rect2(0, 0, 280, 280)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1571749435]
+position = Vector2(7.152556e-06, 7.152556e-06)
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_i6jiw")

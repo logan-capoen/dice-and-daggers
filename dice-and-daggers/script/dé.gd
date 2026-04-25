@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 
 @export_group("Faces du Dé")
 @export var face_1: Texture2D
@@ -9,6 +9,7 @@ extends Node2D
 @export var face_6: Texture2D
 
 @onready var sprite = $Sprite2D
+var est_utilise = false
 var valeur_finale = 0 # On stockera le résultat ici
 
 func lancer_animation():
@@ -31,3 +32,26 @@ func _appliquer_texture(num):
 		4: sprite.texture = face_4
 		5: sprite.texture = face_5
 		6: sprite.texture = face_6
+
+func _mouse_enter():
+	# Si le dé est déjà utilisé, on ne fait RIEN (il reste gris)
+	if est_utilise: 
+		return
+	sprite.self_modulate = Color(2, 2, 0) # Jaune brillant
+
+func _mouse_exit():
+	if est_utilise: 
+		return
+	sprite.self_modulate = Color(1, 1, 1) # Retour au blanc
+
+# 2. GESTION DU CLIC
+func _input_event(_viewport, event, _shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if not est_utilise:
+			valider_utilisation()
+
+func valider_utilisation():
+	est_utilise = true
+	# On le grise DEFINITIVEMENT pour ce tour
+	sprite.self_modulate = Color(0.3, 0.3, 0.3) 
+	print("Dé bloqué avec la valeur : ", valeur_finale)
