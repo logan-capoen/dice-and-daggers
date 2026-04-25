@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://cpwrx6e6qhonn"]
+
+[ext_resource type="PackedScene" uid="uid://bhqiogroei2o6" path="res://scenes/boss/BossBase.tscn" id="1_yq53k"]
+[ext_resource type="Texture2D" uid="uid://cr7khtn7ijas7" path="res://assets/ennemies/Golem_1/Blue/White_Swoosh_VFX/Golem_1_idle.png" id="2_jlktq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2byb"]
+atlas = ExtResource("2_jlktq")
+region = Rect2(0, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpy68"]
+atlas = ExtResource("2_jlktq")
+region = Rect2(90, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52nds"]
+atlas = ExtResource("2_jlktq")
+region = Rect2(180, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65iup"]
+atlas = ExtResource("2_jlktq")
+region = Rect2(270, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpmd7"]
+atlas = ExtResource("2_jlktq")
+region = Rect2(360, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fecfc"]
+atlas = ExtResource("2_jlktq")
+region = Rect2(450, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rcvvx"]
+atlas = ExtResource("2_jlktq")
+region = Rect2(540, 0, 90, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8amlm"]
+atlas = ExtResource("2_jlktq")
+region = Rect2(630, 0, 90, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sopfx"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2byb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hpy68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52nds")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65iup")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpmd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fecfc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rcvvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8amlm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="BossBase" unique_id=440157149 instance=ExtResource("1_yq53k")]
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]
+position = Vector2(190.5, 130)
+scale = Vector2(3.7666667, 3.40625)
+sprite_frames = SubResource("SpriteFrames_sopfx")
+animation = &"attack1"

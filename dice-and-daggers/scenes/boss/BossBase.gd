@@ -79,4 +79,4 @@ func _on_animation_finished() -> void:
 		if current_hp > 0:
 			anim_sprite.play("idle")
 	elif anim_name == "die":
-		pass # Tu peux utiliser queue_free() ici si tu veux faire disparaître le corps
+		queue_free()
