@@ -465,9 +465,10 @@ animations = [{
 
 [node name="BossBase" unique_id=440157149 instance=ExtResource("1_r24v1")]
 boss_name = "mushroom"
-max_hp = 150
-attack1_damage = 20
-attack2_damage = 35
+max_hp = 80
+defense = 2
+attack1_damage = 12
+attack2_damage = 18
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]
 position = Vector2(1034.75, 682)

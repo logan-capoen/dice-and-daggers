@@ -493,6 +493,10 @@ animations = [{
 
 [node name="BossBase" unique_id=440157149 instance=ExtResource("1_23bpy")]
 boss_name = "The bat"
+max_hp = 40
+defense = 0
+attack1_damage = 5
+attack2_damage = 10
 has_intro = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]

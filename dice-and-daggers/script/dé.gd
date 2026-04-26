@@ -45,13 +45,10 @@ func appliquer_effet_face():
 	est_utilise = true
 	sprite.self_modulate = Color(0.3, 0.3, 0.3)
 	
-	# On récupère le nom du fichier (ex: "epee" pour "epee.png")
 	var nom_img = sprite.texture.resource_path.get_file().get_basename()
 	
-	# On envoie le dé ET le nom au plateau
 	get_parent().gerer_clic_de(self, nom_img)
 	
-	# Actions locales (Optionnel si tu gères tout dans le plateau)
 	match nom_img:
 		"epee": print("Attaque !")
 		"soin": print("Soin !")
@@ -72,7 +69,6 @@ func afficher_texte_combo(multiplicateur):
 		tween.parallel().tween_property(label, "modulate:a", 0.0, 1.0)
 		tween.tween_callback(label.hide)
 
-# --- Gestion du survol ---
 func _mouse_enter():
 	if not est_utilise: sprite.self_modulate = Color(2, 2, 0)
 func _mouse_exit():

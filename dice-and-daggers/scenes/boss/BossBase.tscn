@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bhqiogroei2o6"]
 
-[ext_resource type="Script" uid="uid://cddtpi6duy1rh" path="res://scenes/boss/BossBase.gd" id="1_t6du6"]
+[ext_resource type="Script" uid="uid://1hx4wac0yyds" path="res://scenes/boss/BossBase.gd" id="1_t6du6"]
 
 [node name="BossBase" type="Node2D" unique_id=440157149]
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_t6du6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1801250748]

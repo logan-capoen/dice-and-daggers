@@ -430,9 +430,10 @@ animations = [{
 
 [node name="BossBase" unique_id=440157149 instance=ExtResource("1_gpeh8")]
 boss_name = "Striker"
-max_hp = 200
-defense = 20
-attack1_damage = 10
+max_hp = 70
+defense = 4
+attack1_damage = 25
+attack2_damage = 35
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]
 position = Vector2(980.99994, 644.99994)

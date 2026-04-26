@@ -463,8 +463,9 @@ animations = [{
 
 [node name="BossBase" unique_id=440157149 instance=ExtResource("1_yq53k")]
 boss_name = "Golem"
-max_hp = 300
-defense = 20
+max_hp = 150
+defense = 10
+attack2_damage = 20
 has_intro = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]

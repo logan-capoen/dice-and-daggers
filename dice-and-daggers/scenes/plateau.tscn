@@ -4,9 +4,15 @@
 [ext_resource type="Script" uid="uid://5y6p5vrilvir" path="res://script/bar_handling.gd" id="1_dbfg1"]
 [ext_resource type="Script" uid="uid://cdcg1ytqlvwud" path="res://script/main.gd" id="1_ipy82"]
 [ext_resource type="FontFile" uid="uid://c4tihvmr25k1r" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="2_dbfg1"]
+[ext_resource type="PackedScene" uid="uid://ce1tghv4p6x7u" path="res://scenes/boss/Striker.tscn" id="2_w3swp"]
+[ext_resource type="PackedScene" uid="uid://bq3vkhn5li0cn" path="res://scenes/boss/skeleton.tscn" id="3_xyh1l"]
+[ext_resource type="PackedScene" uid="uid://ce04mos6weou0" path="res://scenes/boss/Paladin.tscn" id="4_3hhd0"]
 [ext_resource type="PackedScene" uid="uid://cmuop2jp1lij5" path="res://scenes/de.tscn" id="4_dau7h"]
+[ext_resource type="PackedScene" uid="uid://8m1o2ruiv038" path="res://scenes/boss/Mushroom.tscn" id="5_31cva"]
 [ext_resource type="Script" uid="uid://biexvjqihl3e8" path="res://script/var_poisson.gd" id="5_cwt75"]
 [ext_resource type="Script" uid="uid://c4n4fme8m7m65" path="res://script/var_degat.gd" id="5_dau7h"]
+[ext_resource type="PackedScene" uid="uid://bt07n248ojvu7" path="res://scenes/boss/Hero_other_world.tscn" id="6_ejrm2"]
+[ext_resource type="PackedScene" uid="uid://bjeent2yv1p2m" path="res://scenes/boss/Bat.tscn" id="8_ptrbt"]
 [ext_resource type="PackedScene" uid="uid://cpwrx6e6qhonn" path="res://scenes/boss/Golem.tscn" id="9_55tth"]
 [ext_resource type="Script" uid="uid://dv0aodqq6oinp" path="res://script/character_body_2d.gd" id="9_w3swp"]
 
@@ -26,6 +32,7 @@ bg_color = Color(0, 0.2, 0.4, 1)
 
 [node name="Plateau" type="Node2D" unique_id=545427569]
 script = ExtResource("1_ipy82")
+boss_scenes = Array[PackedScene]([ExtResource("2_w3swp"), ExtResource("3_xyh1l"), ExtResource("4_3hhd0"), ExtResource("5_31cva"), ExtResource("6_ejrm2"), ExtResource("9_55tth"), ExtResource("8_ptrbt")])
 
 [node name="Player" type="Node2D" parent="." unique_id=301665093 groups=["player"]]
 script = ExtResource("9_w3swp")
@@ -216,10 +223,6 @@ script = ExtResource("5_dau7h")
 position = Vector2(58, 168)
 autoplay = true
 
-[node name="BossBase" parent="." unique_id=440157149 groups=["boss"] instance=ExtResource("9_55tth")]
-position = Vector2(433, 29)
-scale = Vector2(0.55, 0.43)
-
 [node name="GameOverLayer" type="CanvasLayer" parent="." unique_id=501547346]
 
 [node name="FadeRect" type="ColorRect" parent="GameOverLayer" unique_id=2035004797]
@@ -231,5 +234,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="BossSpawnPoint" type="Marker2D" parent="." unique_id=499890120]
+position = Vector2(570, 40)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
