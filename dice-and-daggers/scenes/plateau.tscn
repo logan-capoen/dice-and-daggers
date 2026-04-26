@@ -87,25 +87,26 @@ fill_mode = 3
 show_percentage = false
 
 [node name="Boss" type="Label" parent="." unique_id=2146258233]
-offset_left = 900.0
-offset_top = 37.0
-offset_right = 1113.0
-offset_bottom = 170.0
+offset_left = 865.0
+offset_top = 51.0
+offset_right = 1078.0
+offset_bottom = 184.0
 theme_override_fonts/font = ExtResource("2_dbfg1")
 theme_override_font_sizes/font_size = 64
 text = "Boss
 "
 
 [node name="Des" type="Label" parent="." unique_id=1099980764]
-offset_left = 910.0
-offset_top = 603.0
-offset_right = 1123.0
-offset_bottom = 714.0
+offset_left = 902.0
+offset_top = 627.0
+offset_right = 1115.0
+offset_bottom = 738.0
 theme_override_fonts/font = ExtResource("2_dbfg1")
 theme_override_font_sizes/font_size = 64
 text = "Dés"
 
 [node name="Coin" type="Label" parent="." unique_id=1697319143]
+visible = false
 offset_left = 1626.0
 offset_top = 910.0
 offset_right = 1854.0
@@ -125,23 +126,22 @@ theme_override_font_sizes/font_size = 48
 text = "HP"
 
 [node name="Lore" type="Label" parent="." unique_id=473590574]
-offset_left = 44.0
-offset_top = 329.0
-offset_right = 380.0
-offset_bottom = 931.875
+offset_left = 53.0
+offset_top = 367.0
+offset_right = 363.0
+offset_bottom = 983.0
 theme_override_colors/font_color = Color(0.18400851, 0.17901224, 0, 1)
 theme_override_fonts/font = ExtResource("2_dbfg1")
 theme_override_font_sizes/font_size = 30
-text = "Preux chevalier en 
-quête de gloire, 
-vous aspirez 
-à terrasser 
-tous vos 
-adversaires. 
-Armé d’un simple dé, 
-abandonnez-vous à 
-votre destinée au 
-caprice du hasard."
+text = "Preux chevalier en
+quête de gloire,
+vous aspirez à
+vaincre tous vos
+adversaires.
+Armé de simples dés,
+vous confiez votre
+destinée aux
+caprices du hasard."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -157,9 +157,9 @@ text = "Shield"
 
 [node name="Infos" type="Label" parent="." unique_id=2039244058]
 offset_left = 135.0
-offset_top = 48.0
+offset_top = 67.0
 offset_right = 285.0
-offset_bottom = 98.0
+offset_bottom = 117.0
 theme_override_fonts/font = ExtResource("2_dbfg1")
 theme_override_font_sizes/font_size = 48
 text = "Stats"
@@ -182,19 +182,19 @@ uppercase = true
 position = Vector2(598, 782)
 
 [node name="dé2" parent="." unique_id=641474944 instance=ExtResource("4_dau7h")]
-position = Vector2(880, 876)
+position = Vector2(864, 836)
 
 [node name="dé3" parent="." unique_id=1472541842 instance=ExtResource("4_dau7h")]
 position = Vector2(1304, 862)
 
 [node name="dé4" parent="." unique_id=367769667 instance=ExtResource("4_dau7h")]
-position = Vector2(1132, 814)
+position = Vector2(1107.0001, 814.00006)
 
 [node name="Button" type="Button" parent="." unique_id=1512846464]
-offset_left = 865.0
-offset_top = 956.0
-offset_right = 1046.0
-offset_bottom = 1027.0
+offset_left = 857.0
+offset_top = 916.0
+offset_right = 1038.0
+offset_bottom = 987.0
 scale = Vector2(1.1238889, 1.6800001)
 theme_override_font_sizes/font_size = 45
 text = "roll dice"
