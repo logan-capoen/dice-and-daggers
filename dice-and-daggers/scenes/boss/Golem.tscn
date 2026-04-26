@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://csgab40u24ird" path="res://assets/ennemies/Golem_1/Orange/White_Swoosh_VFX/Golem_1_attack.png" id="3_65iup"]
 [ext_resource type="Texture2D" uid="uid://n4uxncsvd0w" path="res://assets/ennemies/Golem_1/Blue/White_Swoosh_VFX/Golem_1_die.png" id="4_gpmd7"]
 [ext_resource type="Texture2D" uid="uid://yg83beq2hw6d" path="res://assets/ennemies/Golem_1/Blue/White_Swoosh_VFX/Golem_1_hurt.png" id="5_fecfc"]
+[ext_resource type="Texture2D" uid="uid://bi1m5j2xpjt18" path="res://assets/background/golemCave.jpg" id="7_65iup"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sopfx"]
 atlas = ExtResource("2_52nds")
@@ -467,7 +468,12 @@ defense = 20
 has_intro = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]
-position = Vector2(190.5, 130)
-scale = Vector2(3.7666667, 3.40625)
+position = Vector2(950.125, 750.25)
+scale = Vector2(8, 7.7)
 sprite_frames = SubResource("SpriteFrames_sopfx")
 animation = &"attack1"
+
+[node name="Sprite2D" parent="." index="1" unique_id=612368277]
+position = Vector2(972, 531.0761)
+scale = Vector2(0.23875, 0.37822643)
+texture = ExtResource("7_65iup")

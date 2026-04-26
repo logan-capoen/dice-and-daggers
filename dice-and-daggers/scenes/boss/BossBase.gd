@@ -17,7 +17,7 @@ var current_hp: int
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
 # --- SIGNAUX ---
-signal on_boss_died
+signal on_boss_died 
 signal on_boss_attacked(damage_amount)
 
 func _ready() -> void:

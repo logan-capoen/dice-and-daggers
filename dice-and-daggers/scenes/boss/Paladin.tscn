@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dyp4jy8fpee0l" path="res://assets/ennemies/Paladin/Death/spr_PaladinDeathWithEffect_strip65.png" id="4_1r827"]
 [ext_resource type="Texture2D" uid="uid://db7oal2dlisuq" path="res://assets/ennemies/Paladin/GetHit/spr_PaladinGetHitWithEffect_strip12.png" id="5_hg2mh"]
 [ext_resource type="Texture2D" uid="uid://bj3smf6i7o3g0" path="res://assets/ennemies/Paladin/Idle/spr_PaladinIdle_strip27.png" id="6_7guyw"]
+[ext_resource type="Texture2D" uid="uid://mr5nil7ma5oe" path="res://assets/background/paladinback.webp" id="7_2bji1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6x1h"]
 atlas = ExtResource("2_2bji1")
@@ -1960,5 +1961,12 @@ attack2_damage = 60
 has_intro = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]
+position = Vector2(950, 1050)
+scale = Vector2(7, 7)
 sprite_frames = SubResource("SpriteFrames_o7piq")
 animation = &"idle"
+
+[node name="Sprite2D" parent="." index="1" unique_id=612368277]
+position = Vector2(959.00006, 548)
+scale = Vector2(2.40375, 2.0205994)
+texture = ExtResource("7_2bji1")

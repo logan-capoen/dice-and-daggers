@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://2hllnsr3jdwo" path="res://assets/ennemies/Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Die.png" id="4_sh8qs"]
 [ext_resource type="Texture2D" uid="uid://cb4jfuud4lmdf" path="res://assets/ennemies/Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Hurt.png" id="5_ctlsx"]
 [ext_resource type="Texture2D" uid="uid://cmpvul3qbfnxh" path="res://assets/ennemies/Skeleton_Sword/Skeleton_White/Skeleton_With_VFX/Skeleton_01_White_Idle.png" id="6_jxrrc"]
+[ext_resource type="Texture2D" uid="uid://dqexcb7aygmg7" path="res://assets/background/dungeo,.jpg" id="7_5ht6r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4avdb"]
 atlas = ExtResource("2_5ht6r")
@@ -453,7 +454,14 @@ defense = 0
 has_intro = true
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]
+position = Vector2(1000, 551)
+scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_bfeih")
 animation = &"intro"
 frame = 12
 frame_progress = 1.0
+
+[node name="Sprite2D" parent="." index="1" unique_id=612368277]
+position = Vector2(972, 535)
+scale = Vector2(3.1356208, 3.2151334)
+texture = ExtResource("7_5ht6r")

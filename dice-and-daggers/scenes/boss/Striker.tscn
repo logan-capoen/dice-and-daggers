@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bt5fwwret0d0" path="res://assets/ennemies/Striker/spr_StrikerDeath_strip.png" id="4_e6d80"]
 [ext_resource type="Texture2D" uid="uid://bq0hybqhe8y2m" path="res://assets/ennemies/Striker/spr_StrikerGetHit_strip.png" id="5_idya3"]
 [ext_resource type="Texture2D" uid="uid://cjyg4y0jw4jkg" path="res://assets/ennemies/Striker/spr_StrikerIdle_strip.png" id="6_jog46"]
+[ext_resource type="Texture2D" uid="uid://d1mt0rnmw24s7" path="res://assets/background/medieval.png" id="7_72rtr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4mrq"]
 atlas = ExtResource("2_72rtr")
@@ -434,6 +435,13 @@ defense = 20
 attack1_damage = 10
 
 [node name="AnimatedSprite2D" parent="." index="0" unique_id=1801250748]
+position = Vector2(980.99994, 644.99994)
+scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_vgpk7")
 animation = &"idle"
-frame_progress = 0.38951606
+frame_progress = 0.59027463
+
+[node name="Sprite2D" parent="." index="1" unique_id=612368277]
+position = Vector2(964.5, 544.5)
+scale = Vector2(2.7414286, 2.7525)
+texture = ExtResource("7_72rtr")
