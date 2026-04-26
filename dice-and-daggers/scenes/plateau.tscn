@@ -217,6 +217,7 @@ position = Vector2(58, 168)
 autoplay = true
 
 [node name="BossBase" parent="." unique_id=440157149 groups=["boss"] instance=ExtResource("9_55tth")]
-position = Vector2(771, 117)
+position = Vector2(433, 29)
+scale = Vector2(0.55, 0.43)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
