@@ -43,19 +43,15 @@ func hurt(damage: int) -> void:
 	else:
 		anim_sprite.play("hurt") # On utilise anim_sprite au lieu de anim_player
 
-# Attaque 1
 func attack1() -> void:
 	if current_hp > 0:
 		anim_sprite.play("attack1")
-		# Tu pourras appeler la fonction de dégâts sur le joueur ici
-		# Exemple via signal : on_boss_attacked.emit(attack1_damage)
-		print(boss_name + " lance l'Attaque 1 !")
+		on_boss_attacked.emit(attack1_damage)
 
-# Attaque 2
 func attack2() -> void:
 	if current_hp > 0:
 		anim_sprite.play("attack2")
-		print(boss_name + " lance l'Attaque 2 !")
+		on_boss_attacked.emit(attack2_damage)
 
 # Mourir
 func die() -> void:
