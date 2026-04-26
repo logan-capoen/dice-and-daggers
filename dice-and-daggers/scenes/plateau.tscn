@@ -26,6 +26,9 @@ bg_color = Color(0, 0.2, 0.4, 1)
 [node name="Plateau" type="Node2D" unique_id=545427569]
 script = ExtResource("1_ipy82")
 
+[node name="Player" type="Node2D" parent="." unique_id=301665093 groups=["player"]]
+script = ExtResource("9_w3swp")
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1309896490]
 anchor_mode = 0
 script = ExtResource("1_dbfg1")
@@ -187,10 +190,6 @@ offset_bottom = 1027.0
 scale = Vector2(1.1238889, 1.6800001)
 theme_override_font_sizes/font_size = 45
 text = "roll dice"
-
-[node name="Player" parent="." unique_id=1020096503]
-position = Vector2(58, 270)
-script = ExtResource("9_w3swp")
 
 [node name="Node" type="Node" parent="." unique_id=432663704]
 

@@ -10,10 +10,9 @@ extends Camera2D
 func _process(delta):
 	if player == null:
 		return
-
-	animer_barre(hp_joueur, player.hp_joueur)
-	animer_barre(shield_joueur, player.shield_joueur)
-
+	animer_barre(hp_joueur, player.hp)
+	animer_barre(shield_joueur, player.shield)
+	
 func animer_barre(barre: ProgressBar, valeur: float):
 	valeur = clamp(valeur, barre.min_value, barre.max_value)
 	var tween = create_tween()

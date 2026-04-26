@@ -1,7 +1,7 @@
 extends Node2D
 
 var hp = 100.0
-var shield = 0.0
+var shield = 50.0
 var damage_poison = 5.0
 
 func die():
