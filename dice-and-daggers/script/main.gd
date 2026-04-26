@@ -1,24 +1,47 @@
 extends Node2D
 
+var dernier_nom : String = ""
+var combo_actuel : int = 0
+var multiplicateurs = [1.0, 1.5, 2.0, 4.0, 8.0, 16.0, 32.0]
+
+func gerer_clic_de(de_clique: Area2D, nom_image: String):
+	# LOGIQUE DU COMBO
+	if nom_image == dernier_nom:
+		combo_actuel += 1
+	else:
+		combo_actuel = 0
+	
+	combo_actuel = min(combo_actuel, multiplicateurs.size() - 1)
+	dernier_nom = nom_image # On retient le nom pour le prochain clic
+	
+	var m = multiplicateurs[combo_actuel]
+	
+	# On demande au dé d'afficher le multiplicateur calculé
+	de_clique.afficher_texte_combo(m)
+	
+	# On applique l'effet global (dégâts, etc.)
+	appliquer_effet_global(nom_image, m)
+
+func appliquer_effet_global(nom, multi):
+	match nom:
+		"epee": print("Dégâts totaux : ", 10 * multi)
+		"soin": print("Soin total : ", 5 * multi)
+
 func _on_button_pressed():
-	# 1. On récupère tous les dés du groupe
+	# RESET DU TOUR
+	dernier_nom = ""
+	combo_actuel = 0
+	
 	var tous_les_des = get_tree().get_nodes_in_group("dés")
 	
-	# 2. VÉRIFICATION : Est-ce qu'ils sont tous utilisés ?
+	# Vérification si tous utilisés
 	for de in tous_les_des:
-		if de.est_utilise == false:
-			print("Action impossible : tu dois utiliser tous les dés !")
-			# Optionnel : faire trembler le bouton ou changer sa couleur ici
-			return # IMPORTANT : On sort de la fonction, le reste du code n'est pas lu
-	
-	# 3. RÉINITIALISATION ET RELANCE
-	# Si on arrive ici, c'est que la boucle du dessus n'a pas trouvé de dé "non utilisé"
-	print("Bravo ! Tous les dés étaient utilisés. Relance en cours...")
-	
+		if not de.est_utilise:
+			print("Utilise tous les dés d'abord !")
+			return
+
+	# Relance
 	for de in tous_les_des:
-		de.est_utilise = false            # On déverrouille le dé
-		de.sprite.self_modulate = Color(1, 1, 1) # On lui redonne sa couleur normale (blanc)
-		de.lancer_animation()             # On lance le nouveau roulement
-	
-	# On attend la fin de l'anim avant de redonner la main
-	await get_tree().create_timer(1.1).timeout
+		de.est_utilise = false
+		de.sprite.self_modulate = Color(1, 1, 1)
+		de.lancer_animation()

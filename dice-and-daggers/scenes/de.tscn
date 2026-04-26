@@ -31,3 +31,16 @@ region_rect = Rect2(0, 0, 280, 280)
 position = Vector2(7.152556e-06, 7.152556e-06)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_i6jiw")
+
+[node name="ComboLabel" type="Label" parent="." unique_id=521102478]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -42.499996
+offset_top = -116.24999
+offset_right = 38.500004
+offset_bottom = -59.249992
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 41
+text = "x1.5"
+horizontal_alignment = 1
+vertical_alignment = 1

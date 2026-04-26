@@ -7,9 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cmuop2jp1lij5" path="res://scenes/de.tscn" id="4_dau7h"]
 [ext_resource type="Script" uid="uid://biexvjqihl3e8" path="res://script/var_poisson.gd" id="5_cwt75"]
 [ext_resource type="Script" uid="uid://c4n4fme8m7m65" path="res://script/var_degat.gd" id="5_dau7h"]
-[ext_resource type="PackedScene" uid="uid://djtyce5wi7orx" path="res://scenes/player.tscn" id="8_cbkn7"]
-[ext_resource type="Script" uid="uid://45svfhl5exfr" path="res://script/character_body_2d.gd" id="9_w3swp"]
-[ext_resource type="AudioStream" uid="uid://c0dyry4ltxfa1" path="res://Lenten Dice.mp3" id="10_55tth"]
+[ext_resource type="Script" uid="uid://dv0aodqq6oinp" path="res://script/character_body_2d.gd" id="9_w3swp"]
 
 [sub_resource type="Theme" id="Theme_dbfg1"]
 
@@ -190,7 +188,7 @@ scale = Vector2(1.1238889, 1.6800001)
 theme_override_font_sizes/font_size = 45
 text = "roll dice"
 
-[node name="Player" parent="." unique_id=1020096503 instance=ExtResource("8_cbkn7")]
+[node name="Player" parent="." unique_id=1020096503]
 position = Vector2(58, 270)
 script = ExtResource("9_w3swp")
 
@@ -216,7 +214,6 @@ script = ExtResource("5_dau7h")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1430666417]
 position = Vector2(58, 168)
-stream = ExtResource("10_55tth")
 autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

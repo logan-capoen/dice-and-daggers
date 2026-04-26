@@ -9,21 +9,24 @@ extends Area2D
 @export var face_6: Texture2D
 
 @onready var sprite = $Sprite2D
+var pos_initiale_label : Vector2
 var est_utilise = false
-var valeur_finale = 0 # On stockera le résultat ici
+var valeur_finale = 0
+
+func _ready():
+	if has_node("ComboLabel"):
+		pos_initiale_label = $ComboLabel.position
+		$ComboLabel.hide()
 
 func lancer_animation():
-	# PHASE DE ROULEMENT
+	if has_node("ComboLabel"): $ComboLabel.hide()
 	for i in range(10):
-		var faux_res = randi_range(1, 6)
-		_appliquer_texture(faux_res)
+		_appliquer_texture(randi_range(1, 6))
 		await get_tree().create_timer(0.1).timeout
-
-	# RÉSULTAT FINAL
+	
 	valeur_finale = randi_range(1, 6)
 	_appliquer_texture(valeur_finale)
 
-# Petite fonction interne pour éviter de répéter le match
 func _appliquer_texture(num):
 	match num:
 		1: sprite.texture = face_1
@@ -33,25 +36,44 @@ func _appliquer_texture(num):
 		5: sprite.texture = face_5
 		6: sprite.texture = face_6
 
-func _mouse_enter():
-	# Si le dé est déjà utilisé, on ne fait RIEN (il reste gris)
-	if est_utilise: 
-		return
-	sprite.self_modulate = Color(2, 2, 0) # Jaune brillant
-
-func _mouse_exit():
-	if est_utilise: 
-		return
-	sprite.self_modulate = Color(1, 1, 1) # Retour au blanc
-
-# 2. GESTION DU CLIC
 func _input_event(_viewport, event, _shape_idx):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if not est_utilise:
-			valider_utilisation()
+			appliquer_effet_face()
 
-func valider_utilisation():
+func appliquer_effet_face():
 	est_utilise = true
-	# On le grise DEFINITIVEMENT pour ce tour
-	sprite.self_modulate = Color(0.3, 0.3, 0.3) 
-	print("Dé bloqué avec la valeur : ", valeur_finale)
+	sprite.self_modulate = Color(0.3, 0.3, 0.3)
+	
+	# On récupère le nom du fichier (ex: "epee" pour "epee.png")
+	var nom_img = sprite.texture.resource_path.get_file().get_basename()
+	
+	# On envoie le dé ET le nom au plateau
+	get_parent().gerer_clic_de(self, nom_img)
+	
+	# Actions locales (Optionnel si tu gères tout dans le plateau)
+	match nom_img:
+		"epee": print("Attaque !")
+		"soin": print("Soin !")
+
+func afficher_texte_combo(multiplicateur):
+	if has_node("ComboLabel"):
+		var label = $ComboLabel
+		var tween = create_tween()
+		
+		label.position = pos_initiale_label
+		label.modulate.a = 1.0
+		label.text = "x" + str(multiplicateur)
+		label.self_modulate = Color.GOLD if multiplicateur > 1.0 else Color.WHITE
+		label.show()
+		
+		tween.tween_interval(0.5)
+		tween.parallel().tween_property(label, "position:y", pos_initiale_label.y - 40, 1.0)
+		tween.parallel().tween_property(label, "modulate:a", 0.0, 1.0)
+		tween.tween_callback(label.hide)
+
+# --- Gestion du survol ---
+func _mouse_enter():
+	if not est_utilise: sprite.self_modulate = Color(2, 2, 0)
+func _mouse_exit():
+	if not est_utilise: sprite.self_modulate = Color(1, 1, 1)
