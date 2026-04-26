@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c04ew11d80l10" path="res://assets/ennemies/Bat/Bat with VFX/Bat-IdleFly.png" id="6_ucd4g"]
 [ext_resource type="Texture2D" uid="uid://buscv3vtjk7ea" path="res://assets/ennemies/Bat/Bat with VFX/Bat-Sleep.png" id="7_0xrjh"]
 [ext_resource type="Texture2D" uid="uid://2khi5sq7f5il" path="res://assets/ennemies/Bat/Bat with VFX/Bat-WakeUp.png" id="8_g462c"]
-[ext_resource type="Texture2D" uid="uid://cklwyvhfb011y" path="res://assets/background/BatCave.png" id="9_f3qus"]
+[ext_resource type="Texture2D" uid="uid://du88q3f7yimlw" path="res://assets/background/BatCave.jpg" id="9_f3qus"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1m6a"]
 atlas = ExtResource("2_woojr")
@@ -506,8 +506,7 @@ sprite_frames = SubResource("SpriteFrames_ppktp")
 animation = &"idle"
 frame_progress = 0.8393329
 
-[node name="Sprite2D2" type="Sprite2D" parent="." index="1" unique_id=580565296]
-show_behind_parent = true
-position = Vector2(953, 544)
-scale = Vector2(0.6798651, 0.702474)
+[node name="Sprite2D" parent="." index="1" unique_id=612368277]
+position = Vector2(957.5, 543.75)
+scale = Vector2(0.23750001, 0.404012)
 texture = ExtResource("9_f3qus")
