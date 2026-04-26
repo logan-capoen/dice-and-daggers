@@ -220,4 +220,16 @@ autoplay = true
 position = Vector2(433, 29)
 scale = Vector2(0.55, 0.43)
 
+[node name="GameOverLayer" type="CanvasLayer" parent="." unique_id=501547346]
+
+[node name="FadeRect" type="ColorRect" parent="GameOverLayer" unique_id=2035004797]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
