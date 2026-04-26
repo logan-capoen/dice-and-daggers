@@ -22,10 +22,17 @@ func gerer_clic_de(de_clique: Area2D, nom_image: String):
 	# On applique l'effet global (dégâts, etc.)
 	appliquer_effet_global(nom_image, m)
 
+@onready var boss = get_tree().get_first_node_in_group("boss")
+@onready var player = get_tree().get_first_node_in_group("player")
+
 func appliquer_effet_global(nom, multi):
 	match nom:
-		"epee": print("Dégâts totaux : ", 10 * multi)
-		"soin": print("Soin total : ", 5 * multi)
+		"epee":
+			var degats = 10 * multi
+			boss.hurt(degats)
+		"soin":
+			var soin = 5 * multi
+			player.hp = min(player.hp + soin, 100)
 
 func _on_button_pressed():
 	# RESET DU TOUR
@@ -45,3 +52,15 @@ func _on_button_pressed():
 		de.est_utilise = false
 		de.sprite.self_modulate = Color(1, 1, 1)
 		de.lancer_animation()
+		
+func _ready():
+	if boss == null:
+		return
+	boss.on_boss_attacked.connect(_on_boss_attacked)
+	boss.on_boss_died.connect(_on_boss_died)
+
+func _on_boss_attacked(degats):
+	player.take_damage(degats)
+
+func _on_boss_died():
+	print("Boss mort")
