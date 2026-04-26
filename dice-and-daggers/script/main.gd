@@ -32,14 +32,18 @@ func gerer_clic_de(de_clique: Area2D, nom_image: String):
 
 func appliquer_effet_global(nom, multi):
 	match nom:
-		"epee":
-			var degats = int(10 * multi)
+		"sword":
 			if boss:
-				boss.hurt(degats)
-		"soin":
-			var soin = int(5 * multi)
+				boss.hurt(int(10 * multi))
+		"skull":
+			if boss:
+				boss.hurt(int(20 * multi))
+		"heart":
 			if player:
-				player.hp = min(player.hp + soin, 100)
+				player.hp = min(player.hp + int(10 * multi), 100)
+		"shield":
+			if player:
+				player.add_shield(int(5 * multi))
 
 func _on_button_pressed():
 	dernier_nom = ""

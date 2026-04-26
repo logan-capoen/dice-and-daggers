@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bbysun1tr0e03"]
 
 [ext_resource type="Texture2D" uid="uid://cn0ekx4pl24up" path="res://background_v2.svg" id="1_7e3mn"]
-[ext_resource type="Script" uid="uid://5y6p5vrilvir" path="res://scenes/bar_handling.gd" id="1_dbfg1"]
+[ext_resource type="Script" uid="uid://5y6p5vrilvir" path="res://script/bar_handling.gd" id="1_dbfg1"]
 [ext_resource type="Script" uid="uid://cdcg1ytqlvwud" path="res://script/main.gd" id="1_ipy82"]
 [ext_resource type="FontFile" uid="uid://c4tihvmr25k1r" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/connection/ConnectionBold.otf" id="2_dbfg1"]
 [ext_resource type="PackedScene" uid="uid://cmuop2jp1lij5" path="res://scenes/de.tscn" id="4_dau7h"]
