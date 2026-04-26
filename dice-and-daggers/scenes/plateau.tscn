@@ -216,7 +216,7 @@ script = ExtResource("5_dau7h")
 position = Vector2(58, 168)
 autoplay = true
 
-[node name="BossBase" parent="." unique_id=440157149 instance=ExtResource("9_55tth")]
+[node name="BossBase" parent="." unique_id=440157149 groups=["boss"] instance=ExtResource("9_55tth")]
 position = Vector2(771, 117)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

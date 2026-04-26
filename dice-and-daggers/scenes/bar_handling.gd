@@ -5,22 +5,20 @@ extends Camera2D
 @onready var hp_joueur = $HPJoueur
 @onready var shield_joueur = $ShieldJoueur
 
-@onready var boss = get_tree().get_first_node_in_group("boss")
-@onready var player = get_tree().get_first_node_in_group("player")
+var player = null
+var boss = null
 
 func _process(delta):
 	if player == null:
-		print("player null !")
+		player = get_tree().get_first_node_in_group("player")
+	if boss == null:
+		boss = get_tree().get_first_node_in_group("boss")
+	if player == null or boss == null:
 		return
-	#print("HP joueur : ", player.hp, ", Shield : ", player.shield)
 	animer_barre(hp_joueur, player.hp)
 	animer_barre(shield_joueur, player.shield)
-	if boss == null:
-		print("boss null !")
-		return
-	#print("HP boss : ", boss.getHP())
 	animer_barre(hp_boss, boss.getHP())
-	
+
 func animer_barre(barre: ProgressBar, valeur: float):
 	valeur = clamp(valeur, barre.min_value, barre.max_value)
 	var tween = create_tween()
