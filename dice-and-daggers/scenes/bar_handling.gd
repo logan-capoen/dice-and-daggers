@@ -16,6 +16,7 @@ func _process(delta):
 	animer_barre(hp_joueur, player.hp)
 	animer_barre(shield_joueur, player.shield)
 	if boss == null:
+		print("boss null !")
 		return
 	#print("HP boss : ", boss.getHP())
 	animer_barre(hp_boss, boss.getHP())

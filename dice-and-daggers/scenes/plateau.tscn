@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cmuop2jp1lij5" path="res://scenes/de.tscn" id="4_dau7h"]
 [ext_resource type="Script" uid="uid://biexvjqihl3e8" path="res://script/var_poisson.gd" id="5_cwt75"]
 [ext_resource type="Script" uid="uid://c4n4fme8m7m65" path="res://script/var_degat.gd" id="5_dau7h"]
-[ext_resource type="PackedScene" uid="uid://8m1o2ruiv038" path="res://scenes/boss/Mushroom.tscn" id="9_55tth"]
+[ext_resource type="PackedScene" uid="uid://cpwrx6e6qhonn" path="res://scenes/boss/Golem.tscn" id="9_55tth"]
 [ext_resource type="Script" uid="uid://dv0aodqq6oinp" path="res://script/character_body_2d.gd" id="9_w3swp"]
 
 [sub_resource type="Theme" id="Theme_dbfg1"]
@@ -216,7 +216,7 @@ script = ExtResource("5_dau7h")
 position = Vector2(58, 168)
 autoplay = true
 
-[node name="BossBase" parent="." unique_id=440157149 groups=["player"] instance=ExtResource("9_55tth")]
-position = Vector2(902, 322)
+[node name="BossBase" parent="." unique_id=440157149 instance=ExtResource("9_55tth")]
+position = Vector2(771, 117)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
